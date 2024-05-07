@@ -19,7 +19,7 @@ var url = computed(() => 'https://api.openweathermap.org/data/2.5/weather?lat=' 
 var data = ref();
 
 var rainy = ["słabe opady deszczu", "umiarkowane opady deszczu"];
-var cloudy = ["pochmurnie", "zachmurzenie duże", "zachmurzenie umiarkowane"];
+var cloudy = ["pochmurnie", "zachmurzenie duże", "zachmurzenie umiarkowane", "zachmurzenie małe"];
 var clear = ["bezchmurnie"];
 
 // const response = await fetch(url.value);

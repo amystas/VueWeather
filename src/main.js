@@ -4,6 +4,6 @@ import 'remixicon/fonts/remixicon.css'
 
 setTimeout(() => {
     createApp(App).mount('#app')
-  }, 5000);
+  }, 3000);
   
 

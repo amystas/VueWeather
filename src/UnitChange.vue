@@ -1,11 +1,21 @@
 <script setup>
-    defineEmits(['toImperial', 'toMetric']);
+    const emit = defineEmits(['toImperial', 'toMetric']);
+    function metricSelected() {
+        document.getElementById('metric').style.backgroundColor="rgba(80, 142, 213, 0.627)";
+        document.getElementById('imperial').style.backgroundColor="rgba(51, 108, 175, 0.627)";
+        emit("toMetric");
+    }
+    function imperialSelected() {
+        document.getElementById('imperial').style.backgroundColor="rgba(80, 142, 213, 0.627)";
+        document.getElementById('metric').style.backgroundColor="rgba(51, 108, 175, 0.627)";
+        emit("toImperial");
+    }
 </script>
 
 <template>
     <section>
-        <div @click="$emit('toMetric')" id="metric">&deg;C</div>
-        <div @click="$emit('toImperial')" id="imperial">&deg;F</div>
+        <div @click="metricSelected" id="metric">&deg;C</div>
+        <div @click="imperialSelected" id="imperial">&deg;F</div>
     </section>
 </template>
 
@@ -20,6 +30,7 @@
         border-radius: 10px;
     }
     #metric {
+        background-color: rgba(80, 142, 213, 0.627);
         border-bottom-right-radius: 0;
         border-top-right-radius: 0;
     }

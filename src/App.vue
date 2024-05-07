@@ -1,5 +1,5 @@
 <script setup>
-  import {ref, reactive} from 'vue';
+  import {ref} from 'vue';
   import Forecast from './Forecast.vue';
   import SearchBar from './SearchBar.vue';
   import UnitChange from './UnitChange.vue';
